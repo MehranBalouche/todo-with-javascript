@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Todo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&amp;display=swap'>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="container m-5 p-2 rounded mx-auto bg-light shadow">
+    <!-- App title section -->
+    <div class="row m-1 p-4">
+        <div class="col">
+            <div class="p-1 h1 text-primary text-center mx-auto display-inline-block">
+                
+                <i class="bi bi-check-square-fill rounded p-2"></i>
+                <u>My Todo-s</u>
+            </div>
+        </div>
+    </div>
+    <!-- Create todo section -->
+    <div class="row m-1 p-3">
+        <div class="col col-11 mx-auto">
+            <div class="row bg-white rounded shadow-sm p-2 add-todo-wrapper align-items-center justify-content-center">
+                <div class="col">
+                    <input class="form-control form-control-lg border-0 add-todo-input bg-transparent rounded" type="text" placeholder="Add new ..">
+                </div>
+                <div class="col-auto px-0 mx-0 me-2">
+                    <button type="button" class="btn btn-primary">Add</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="p-2 mx-4 border-black-25 border-bottom"></div>
+    <!-- View options section -->
+    <div class="row m-1 p-3 px-5 justify-content-end">
+        <div class="col-auto d-flex align-items-center">
+            <label class="text-secondary my-2 pe-2 view-opt-label">Filter</label>
+            <select class="custom-select custom-select-sm btn my-2 border-0">
+                <option value="all" selected>All</option>
+                <option value="completed">Completed</option>
+                <option value="uncompleted">Uncompleted</option>
+            </select>
+        </div>
+    </div>
+    <!-- Todo list section -->
+    <div class="row mx-1 px-5 pb-3 w-80">
+        <div class="col mx-auto">
+            <!-- Todo Item 1 -->
+            <div class="row px-3 align-items-center todo-item rounded">
+                <div class="col-auto m-1 p-0 d-flex align-items-center">
+                    <h3 class="m-0 p-0">
+                        <input class="form-check-input" type="checkbox">
+                    </h3>
+                </div>
+                <div class="col px-1 m-1 d-flex align-items-center">
+                    <input type="text" class="form-control form-control-lg border-0 edit-todo-input bg-transparent rounded px-3" readonly value="Buy groceries for next week" title="Buy groceries for next week" />
+                    <input type="text" class="form-control form-control-lg border-0 edit-todo-input rounded px-3 d-none" value="Buy groceries for next week" />
+                </div>
+                <div class="col-auto m-1 p-0 px-3 d-none">
+                </div>
+                <div class="col-auto m-1 p-0 todo-actions">
+                    <div class="row d-flex align-items-center justify-content-end">
+                        <h5 class="m-0 p-0 px-2">
+                            <i class="bi bi-trash3-fill text-danger btn m-0 p-0 fs-4" data-toggle="tooltip" data-placement="bottom" title="Delete todo"></i>
+                        </h5>
+                    </div>
+                </div>
+            </div>
+            <!-- Todo Item 2 -->
+            <div class="row px-3 align-items-center todo-item rounded">
+                <div class="col-auto m-1 p-0 d-flex align-items-center">
+                    <h3 class="m-0 p-0">
+                        <input class="form-check-input" type="checkbox">
+                    </h3>
+                </div>
+                <div class="col px-1 m-1 d-flex align-items-center">
+                    <input type="text" class="form-control form-control-lg border-0 edit-todo-input bg-transparent rounded px-3" readonly value="Renew car insurance" title="Renew car insurance" />
+                    <input type="text" class="form-control form-control-lg border-0 edit-todo-input rounded px-3 d-none" value="Renew car insurance" />
+                </div>
+                <div class="col-auto m-1 p-0 todo-actions">
+                    <div class="row d-flex align-items-center justify-content-end">
+                        <h3 class="m-0 p-0 px-2">
+                            <i class="bi bi-trash3-fill text-danger btn m-0 p-0 fs-4" data-toggle="tooltip" data-placement="bottom" title="Delete todo"></i>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <!-- Todo Item 3 -->
+            <div class="row px-3 align-items-center todo-item editing rounded">
+                <div class="col-auto m-1 p-0 d-flex align-items-center">
+                    <h3 class="m-0 p-0">
+                        <input class="form-check-input" type="checkbox">
+                    </h3>
+                </div>
+                <div class="col px-1 m-1 d-flex align-items-center">
+                    <!-- <input type="text" class="form-control form-control-lg border-0 edit-todo-input bg-transparent rounded px-3 d-none" readonly value="Sign up for online course" title="Sign up for online course" /> -->
+                    <input type="text" class="form-control form-control-lg border-0 edit-todo-input rounded px-3" value="Sign up for online course" />
+                </div>
+                <div class="col-auto m-1 p-0 px-3 d-none">
+                </div>
+                <div class="col-auto m-1 p-0 todo-actions">
+                    <div class="row d-flex align-items-center justify-content-end">
+                        <h3 class="m-0 p-0 px-2">
+                            <i class="bi bi-trash3-fill text-danger btn m-0 p-0 fs-4" data-toggle="tooltip" data-placement="bottom" title="Delete todo"></i>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
