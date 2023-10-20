@@ -56,7 +56,7 @@ let $ = document;
                 <div class="row px-3 align-items-center todo-item rounded">
                     <div class="col-auto m-1 p-0 d-flex align-items-center">
                         <h3 class="m-0 p-0">
-                            ${ todo.completed ? '<input class="form-check-input" type="checkbox" checked></input>' : '<input class="form-check-input" type="checkbox">'}
+                            ${ todo.completed ? `<input data-id="${todo.id}" onclick="changeStatus(event)" class="form-check-input" type="checkbox" checked />` : `<input data-id="${todo.id}" onclick="changeStatus(event)" class="form-check-input" type="checkbox" />`}
                         </h3>
                     </div>
                     <div class="col px-1 m-1 d-flex align-items-center">
@@ -93,6 +93,24 @@ let $ = document;
         // event.target.dataset.id
         // event.target.parentElement.parentElement.parentElement.parentElement
     }
+    function changeStatus(event){
+        localStorageTodos = JSON.parse(localStorage.getItem('m-todosData'));
+        todoId = event.target.dataset.id
+        todosArray = localStorageTodos;
+        todosArray.forEach(function (todo) {
+            if (todo.id === todoId) {
+               return todo.completed = !todo.completed
+
+            }
+
+    })
+    syncToStorage(todosArray)
+    showTodos(todosArray)
+    }
+
+
+
+
     window.addEventListener('load', getTodos)
     addTodoBtnElem.addEventListener('click', getNewTodoInfo)
     todoInputElem.addEventListener('keypress', (event)=> {if (event.keyCode === 13) getNewTodoInfo()})
