@@ -8,7 +8,7 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&amp;display=swap'>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-<link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
 <!-- partial:index.partial.html -->
@@ -19,7 +19,7 @@
             <div class="p-1 h1 text-primary text-center mx-auto display-inline-block">
                 
                 <i class="bi bi-check-square-fill rounded p-2"></i>
-                <u>My Todo-s</u>
+                <span class="text-decoration-underline fw-bold">My Todo-s</span>
             </div>
         </div>
     </div>
@@ -28,10 +28,10 @@
         <div class="col col-11 mx-auto">
             <div class="row bg-white rounded shadow-sm p-2 add-todo-wrapper align-items-center justify-content-center">
                 <div class="col">
-                    <input class="form-control form-control-lg border-0 add-todo-input bg-transparent rounded" type="text" placeholder="Add new ..">
+                    <input id="todoInput" class="form-control form-control-lg border-0 add-todo-input bg-transparent rounded" type="text" placeholder="Add new ..">
                 </div>
                 <div class="col-auto px-0 mx-0 me-2">
-                    <button type="button" class="btn btn-primary">Add</button>
+                    <button id="addtodobtn" type="button" class="btn btn-primary">Add</button>
                 </div>
             </div>
         </div>
@@ -50,8 +50,25 @@
     </div>
     <!-- Todo list section -->
     <div class="row mx-1 px-5 pb-3 w-80">
-        <div class="col mx-auto">
-            <!-- Todo Item 1 -->
+        <div id="todosContainer" class="col mx-auto">
+            <!-- here we show the todos -->
+                
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- scripts -->
+<script src="./js/sweetalert2@11.js"></script>
+<script src="./js/script.js"></script>
+
+</body>
+</html>
+
+
+            <!-- Todo Item 1 
             <div class="row px-3 align-items-center todo-item rounded">
                 <div class="col-auto m-1 p-0 d-flex align-items-center">
                     <h3 class="m-0 p-0">
@@ -67,12 +84,12 @@
                 <div class="col-auto m-1 p-0 todo-actions">
                     <div class="row d-flex align-items-center justify-content-end">
                         <h5 class="m-0 p-0 px-2">
-                            <i class="bi bi-trash3-fill text-danger btn m-0 p-0 fs-4" data-toggle="tooltip" data-placement="bottom" title="Delete todo"></i>
+                            <i class="bi bi-check-circle text-danger btn m-0 p-0 fs-4" data-toggle="tooltip" data-placement="bottom" title="Delete todo"></i>
                         </h5>
                     </div>
                 </div>
-            </div>
-            <!-- Todo Item 2 -->
+            </div> -->
+            <!-- Todo Item 2 
             <div class="row px-3 align-items-center todo-item rounded">
                 <div class="col-auto m-1 p-0 d-flex align-items-center">
                     <h3 class="m-0 p-0">
@@ -90,8 +107,8 @@
                         </h3>
                     </div>
                 </div>
-            </div>
-            <!-- Todo Item 3 -->
+            </div> -->
+            <!-- Todo Item 3 
             <div class="row px-3 align-items-center todo-item editing rounded">
                 <div class="col-auto m-1 p-0 d-flex align-items-center">
                     <h3 class="m-0 p-0">
@@ -99,7 +116,7 @@
                     </h3>
                 </div>
                 <div class="col px-1 m-1 d-flex align-items-center">
-                    <!-- <input type="text" class="form-control form-control-lg border-0 edit-todo-input bg-transparent rounded px-3 d-none" readonly value="Sign up for online course" title="Sign up for online course" /> -->
+                    <input type="text" class="form-control form-control-lg border-0 edit-todo-input bg-transparent rounded px-3 d-none" readonly value="Sign up for online course" title="Sign up for online course" />
                     <input type="text" class="form-control form-control-lg border-0 edit-todo-input rounded px-3" value="Sign up for online course" />
                 </div>
                 <div class="col-auto m-1 p-0 px-3 d-none">
@@ -111,10 +128,4 @@
                         </h3>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-</body>
-</html>
+            </div> -->
